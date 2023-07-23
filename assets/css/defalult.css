@@ -1,0 +1,131 @@
+@charset "UTF-8";
+@import url(./reset.css);
+/* clearfix */
+.clearfix{zoom:1;}
+.clearfix:after {display: block; content: ""; clear: both;}
+
+/* 링크태그 */
+a:link      {text-decoration: none; color: #000000; }
+
+
+a:link      {text-decoration: none; color: #000000; }
+a:visited   {text-decoration: none; color: #000000; }
+a:active    {text-decoration: none; }
+a:hover     {text-decoration: none; color: red; }
+
+
+/* txt 관련 */
+.bold {font-weight: bold;}
+.text-center {text-align: center; }
+.text-right {text-align: right; }
+.text-left {text-align: left; }
+
+
+
+/* ------------------------------------------------------------- */
+
+/* 문서 초기화 */
+html, body {
+    font-family: "맑은 고딕", 돋움, 굴림; 
+    font-size: 15px; /* font-size:62.5%; */  /* 1rem=10px */ 
+    color: #000000; 
+    text-align:center; 
+    line-height: 1.2;
+    overflow-y:scroll;
+    text-align: left;
+}
+
+
+/* ||layout */
+
+.container {}
+.container header { height: 48px; padding: 0 10px; border-bottom: 1px solid #000000; line-height: 48px; }
+.container header h1 { float: left; font-size: 20px; font-weight: bold;  }
+
+/* .container nav { height: 40px; background-color: beige; } */
+
+.container .content { padding: 10px; }
+
+/* .container .content #recommend h2 */  /* h2제목은 공통 그래서 #recommend 표기안함 */
+.container .content h2 { padding: 0 0 5px 0; font-size: 18px; font-weight: bold; }
+
+/* .container .content #recommend #direct */
+#direct ol>li.food-item-list { padding: 10px; margin: 0 0 5px 0; border: 1px solid #0152CC; }
+
+/* li.food-item-list */
+.food-item-list img { float: left; width: 120px; border: 1px solid #0152CC;}
+.food-item-list .title-info-btn-box { float: right; width: calc(100% - 120px - 10px); }
+.food-item-list .title-info-btn-box .title { width: 100%; padding: 0px 0px 10px 0px; font-size: 16px; font-weight: bold; }
+.food-item-list .title-info-btn-box .info-box {  }
+.food-item-list .title-info-btn-box .info-box .info { float: left; }
+.food-item-list .title-info-btn-box .info-box .info .price { padding: 0px 0px 3px 0px; font-size: 15px; color: #000000; }
+.food-item-list .title-info-btn-box .info-box .info .store { padding: 0px 0px 3px 0px; font-size: 15px; color: #000000; }
+.food-item-list .title-info-btn-box .info-box .info .cate { padding: 0px 0px 3px 0px; font-size: 15px; color: #595959; }
+.food-item-list .title-info-btn-box .info-box .btn-box {float: right; padding: 3px 0px 0px 0px;}
+.food-item-list .title-info-btn-box .info-box .btn-box .btn-choice {
+    width: 50px;
+    height: 60px;
+    font-size: 16px; 
+    border-radius: 0.2rem;
+    border: 1px solid #f02f64;
+    background-color: #ffffff;
+    color: #f02f64;
+}
+
+.food-item-list .title-info-btn-box .info-box .btn-box .btn-choice.on {
+    width: 50px;
+    height: 60px;
+    font-size: 16px; 
+    border-radius: 0.2rem;
+    border: 1px solid #f02f64;
+    background-color: #f02f64;
+    color: #ffffff;
+}
+
+
+/*
+.food-info-box { float: left; padding: 0 10px; }
+#direct ol>li .food-info-box .food-title { padding: 0px 0px 10px 0px; font-size: 16px; font-weight: bold; }
+#direct ol>li .food-info-box .food-price { padding: 0px 0px 5px 0px; font-size: 14px; font-weight: bold; }
+#direct ol>li .food-info-box .food-store { padding: 0px 0px 5px 0px; font-size: 14px; font-weight: bold; }
+#direct ol>li .food-info-box .btn-food-choice { 
+    font-size: 16px; 
+    border-radius: 0.4rem;
+    border: 1px solid #f02f64;
+    background-color: #ffffff;
+    color: #f02f64;
+}
+
+*/
+
+/* .container .content #recommend */
+/* #direct .btn-box { 
+    box-sizing: border-box;
+    padding: 1rem 0rem 1rem 0rem;
+     background-color: gray;  */
+
+
+#direct .again-choice-btn-box #btn-agian { 
+    float: left;
+    width: 30%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #f02f64;
+    background-color: #ffffff;
+    color: #f02f64;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#direct .again-choice-btn-box #btn-choice  { 
+    float: right;
+    width: 62%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #f02f64;
+    background-color: #f02f64;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}

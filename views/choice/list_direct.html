@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
-    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/defalult.css">
 
     <style>
 
@@ -16,10 +16,10 @@
 </head>
 <body>
 
-<div id="container">
+<div class="container">
     <header class="clearfix">
         <h1><a href="#">점심은?</a></h1>
-        <ul class="links ">
+        <!-- <ul class="links ">
             <li><a href="#">점심메뉴등록</a></li>
             <li>
                 <a href="#">마이페이지</a>
@@ -28,34 +28,101 @@
                     <li>나의리뷰</li>
                 </ul>    
             </li>
-        </ul>
+        </ul> -->
     </header>
-    <hr>
-    <nav id="game-type">
+<!-- 
+    <nav>
         <ul>
-            <li><a href="">직접선택</a></li>
-            <li><a href="">룰렛</a></li>
-            <li><a href="">사다리</a></li>
+            <li>sub-menu</li>
         </ul>
     </nav>
-    <div>
-        <div>오늘의 추천메뉴</div>
-        <ol>
-            <li>
-                <div>제목1</div>
-                <div>가격1</div>
-            </li>
-            <li>
-                <div>제목1</div>
-                <div>가격1</div>
-            </li>
-        </ol>
-    </div>
-    <div>
-        <button>다시추천</button>
-    </div>
-</div>
+ -->
+    <div class="content">
+        <main id="recommend">
+            <h2>오늘의 추천메뉴</h2>
+            <div id="direct">
+                <ol>
+                    <li class="food-item-list clearfix">
+                        <img src="../../assets/images/food001.jpg" class="food-img-box">
+                        <div class="title-info-btn-box clearfix">
+                            <div class="title">열무비빔밥+우럭된장우럭우</div>
+                            <div class="info-box clearfix">
+                                <div class="info">
+                                    <div class="price">9,500원</div>
+                                    <div class="store">봉된장 본점</div>
+                                    <div class="cate">한식</div>
+                                </div>
+                                <div class="btn-box">
+                                    <button class="btn-choice" type="button">선택</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="food-item-list clearfix">
+                        <img src="../../assets/images/food002.jpg" class="food-img-box">
+                        <div class="title-info-btn-box clearfix">
+                            <div class="title">치즈돈가스</div>
+                            <div class="info-box clearfix">
+                                <div class="info">
+                                    <div class="price">9,500원</div>
+                                    <div class="store">봉된장 본점</div>
+                                    <div class="cate">한식</div>
+                                </div>
+                                <div class="btn-box">
+                                    <button class="btn-choice on" type="button">선택</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="food-item-list clearfix">
+                        <img src="../../assets/images/food003.jpg" class="food-img-box">
+                        <div class="title-info-btn-box clearfix">
+                            <div class="title">새우스파게티</div>
+                            <div class="info-box clearfix">
+                                <div class="info">
+                                    <div class="price">9,500원</div>
+                                    <div class="store">봉된장 본점</div>
+                                    <div class="cate">양식</div>
+                                </div>
+                                <div class="btn-box">
+                                    <button class="btn-choice" type="button">선택</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="food-item-list clearfix">
+                        <img src="../../assets/images/food004.jpg" class="food-img-box">
+                        <div class="title-info-btn-box clearfix">
+                            <div class="title">짜장면</div>
+                            <div class="info-box clearfix">
+                                <div class="info">
+                                    <div class="price">9,500원</div>
+                                    <div class="store">봉된장 본점</div>
+                                    <div class="cate">중식</div>
+                                </div>
+                                <div class="btn-box">
+                                    <button class="btn-choice" type="button">선택</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+               
+                <div class="again-choice-btn-box clearfix">
+                    <button id="btn-agian">다시추천</button>
+                    <a id="btn-choice">오늘 점심메뉴 결정</a>
+                </div>
+                <!-- //btn-box -->
 
+            </div>
+            <!-- //direct -->
+        </main>
+        <!-- //recommend -->
+       
+    </div>
+    <!-- //content -->
+</div>
+<!-- //container -->
 
 </body>
 </html>
