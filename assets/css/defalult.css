@@ -38,57 +38,47 @@ html, body {
 
 /* ||layout */
 
+/* 전체박스 */
 .container {}
+
+/* 해더 */
 .container header { height: 48px; padding: 0 10px; border-bottom: 1px solid #000000; line-height: 48px; }
 .container header h1 { float: left; font-size: 20px; font-weight: bold;  }
 
-/* .container nav { height: 40px; background-color: beige; } */
 
-.container .content { padding: 10px; }
+/* main( food-choice: 음식선택 ) */
+.food-choice { padding: 10px; }
+.food-choice h2 { padding: 0 0 5px 0; font-size: 18px; font-weight: bold; }
 
-/* .container .content #recommend h2 */  /* h2제목은 공통 그래서 #recommend 표기안함 */
-.container .content h2 { padding: 0 0 5px 0; font-size: 18px; font-weight: bold; }
+/* #recommend #direct 직접 선택 리스트 */
+.food-list .food-item { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between; 
+    padding: 10px; 
+    margin: 0 0 5px 0; 
+    border: 1px solid #BFBFBF; }
+.food-list .food-item .food-img { width: 120px; }
+.food-list .food-item .food-info-box { 
+    display: flex; 
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start; 
+    width: calc(100% - 120px - 10px); position: relative; }
 
-/* .container .content #recommend #direct */
-#direct ol>li.food-item-list { padding: 10px; margin: 0 0 5px 0; border: 1px solid #0152CC; }
-
-/* li.food-item-list */
-.food-item-list img { float: left; width: 120px; border: 1px solid #0152CC;}
-.food-item-list .title-info-btn-box { float: right; width: calc(100% - 120px - 10px); }
-.food-item-list .title-info-btn-box .title { width: 100%; padding: 0px 0px 10px 0px; font-size: 16px; font-weight: bold; }
-.food-item-list .title-info-btn-box .info-box {  }
-.food-item-list .title-info-btn-box .info-box .info { float: left; }
-.food-item-list .title-info-btn-box .info-box .info .price { padding: 0px 0px 3px 0px; font-size: 15px; color: #000000; }
-.food-item-list .title-info-btn-box .info-box .info .store { padding: 0px 0px 3px 0px; font-size: 15px; color: #000000; }
-.food-item-list .title-info-btn-box .info-box .info .cate { padding: 0px 0px 3px 0px; font-size: 15px; color: #595959; }
-.food-item-list .title-info-btn-box .info-box .btn-box {float: right; padding: 3px 0px 0px 0px;}
-.food-item-list .title-info-btn-box .info-box .btn-box .btn-choice {
-    width: 50px;
-    height: 60px;
-    font-size: 16px; 
-    border-radius: 0.2rem;
-    border: 1px solid #f02f64;
-    background-color: #ffffff;
-    color: #f02f64;
+.food-list .food-item .food-title { font-size: 16px; font-weight: bold; flex-grow: 2; }
+.food-list .food-item .food-price { font-size: 14px; flex-grow: 1; }
+.food-list .food-item .food-point { font-size: 14px; flex-grow: 1; }
+.food-list .food-item .food-cate { font-size: 14px; flex-grow: 1; }
+.food-list .food-item .btn-wrap {
+    width: 70px; height: 50px;    
+    position: absolute; bottom: 0px; right: 0px;
 }
 
-.food-item-list .title-info-btn-box .info-box .btn-box .btn-choice.on {
-    width: 50px;
-    height: 60px;
-    font-size: 16px; 
-    border-radius: 0.2rem;
-    border: 1px solid #f02f64;
-    background-color: #f02f64;
-    color: #ffffff;
-}
-
-
-/*
-.food-info-box { float: left; padding: 0 10px; }
-#direct ol>li .food-info-box .food-title { padding: 0px 0px 10px 0px; font-size: 16px; font-weight: bold; }
-#direct ol>li .food-info-box .food-price { padding: 0px 0px 5px 0px; font-size: 14px; font-weight: bold; }
-#direct ol>li .food-info-box .food-store { padding: 0px 0px 5px 0px; font-size: 14px; font-weight: bold; }
-#direct ol>li .food-info-box .btn-food-choice { 
+.food-list .food-item .btn-choice {
+    width: 100%;
+    height: 100%;
     font-size: 16px; 
     border-radius: 0.4rem;
     border: 1px solid #f02f64;
@@ -96,36 +86,34 @@ html, body {
     color: #f02f64;
 }
 
-*/
 
-/* .container .content #recommend */
-/* #direct .btn-box { 
-    box-sizing: border-box;
-    padding: 1rem 0rem 1rem 0rem;
-     background-color: gray;  */
-
-
-#direct .again-choice-btn-box #btn-agian { 
-    float: left;
-    width: 30%;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #f02f64;
-    background-color: #ffffff;
-    color: #f02f64;
-    font-size: 16px;
-    font-weight: bold;
+ input[type=radio]{
+    display: none;
 }
-
-#direct .again-choice-btn-box #btn-choice  { 
-    float: right;
-    width: 62%;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #f02f64;
-    background-color: #f02f64;
-    color: #ffffff;
-    font-size: 16px;
+ input[type=radio]+label {
+    display: inline-block;
+    cursor: pointer;
+    height: 24px;
+    width: 90px;
+    border: 1px solid #333;
+    line-height: 24px;
     text-align: center;
-    font-weight: bold;
+    font-weight:bold;
+    font-size:13px;
+    background-color: #fff;
+    color: #333;
 }
+
+
+input[type=radio]:checked+label{
+    background-color: #333;
+    color: #fff;
+}
+
+#direct-list .food-item .food-inner { float: right; width: calc(100% - 120px - 10px); }
+
+#direct-list .food-item ul { float: left; }
+#direct-list .food-item ul>li {padding: 0px 0px 2px 0px; font-size: 14px; }
+
+ */
+ */
