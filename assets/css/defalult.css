@@ -35,9 +35,6 @@ html, body {
     text-align: left;
 }
 
-
-/* ||layout */
-
 /* 전체박스 */
 .container {}
 
@@ -71,18 +68,19 @@ html, body {
 .food-list .food-item .food-price { font-size: 14px; flex-grow: 1; }
 .food-list .food-item .food-point { font-size: 0px; flex-grow: 1; }
 .food-list .food-item .food-store { font-size: 14px; flex-grow: 1; }
-.food-list .food-item .btn-wrap {
+
+/* 라디오=>선택버튼 모양 */
+.food-list .food-item .radio-display-btn-wrap {
     width: 70px; height: 50px;    
-    position: absolute; bottom: 0px; right: 0px;
+    position: absolute; top: 32px; right: 0px;
     background-color: aqua;
 }
 
-/* 라디오=>선택버튼 모양 */
-.btn-wrap input[type=radio]{
+.radio-display-btn-wrap input[type=radio] {
     display: none;
 }
 
-.btn-wrap .btn-choice {
+.radio-display-btn-wrap .rdo-choice {
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -90,21 +88,26 @@ html, body {
     cursor: pointer;
     font-size: 16px; 
     border-radius: 4px;
-    border: 1px solid #f02f64;
+    border: 1px solid #E52E7B;
     background-color: #ffffff;
-    color: #f02f64;
+    color: #E52E7B;
     line-height: 50px;
 }
 
-.btn-wrap input[type=radio]:checked+.btn-choice{
-    background-color: #f02f64;
+
+.radio-display-btn-wrap input[type=radio]:checked+.rdo-choice{
+    background-color: #E52E7B;
     color: #ffffff;
 }
 
 
-.star-wrap {
+
+/* 별점 css  재사용희망 
+   보기만 됨, 입력추가해야함
+   이미지도 변경해야함 노란색으로변경 
+*/
+.star-rating .star-wrap {
     display: inline-block;
-    overflow:hidden;
     width: 75px;
 	height: 14px;
     background-size: 75px auto;
@@ -113,10 +116,9 @@ html, body {
     background-position:0 0px;
 }
 
-.star-wrap > .star-point {
+.star-rating .star-wrap > .star-point {
     display: inline-block;
-    overflow:hidden;
-    width: 34%;  /* 별점따라 변하는부분 */
+    width: 100%;  /* 별점따라 변하는부분 */
 	height: 100%;
     background-size: 75px auto;
     background-image: url("../images/star.png");
@@ -124,29 +126,48 @@ html, body {
     background-position:0 -15px;
 }
 
-.num-point, .review-count {
+.star-rating .num-point, 
+.star-rating .review-cnt {
     display: inline-block;
     height: 14px;
-    line-height: 14px;
     font-size: 15px;
     font-weight: bold;
+    vertical-align: 1px;
+}
+
+
+.food-choice .btn-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between; 
+    height: 50px;
+    gap: 10px;
+    
+}
+.food-choice #btn-agian {
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px; 
+    border-radius: 4px;
+    border: 1px solid #E52E7B;
+    background-color: #ffffff;
+    color: #E52E7B;
+    flex-grow: 1;
 }
 
 
 
-.rate{background: url(https://aldo814.github.io/jobcloud/html/images/user/star_bg02.png) no-repeat;width: 121px;height: 20px;position: relative;}
-.rate span{position: absolute;background: url(https://aldo814.github.io/jobcloud/html/images/user/star02.png);width: auto;height: 20px;}
-
-
-/* Star Rating */
-.starRating,.starRating span{ 
-    width: 205px;
-	height: 40px;
-    display:inline-block; 
-    background-size: cover; 
-    background-repeat: no-repeat;          
-    background-image: url("../images/star.png");
-    overflow:hidden;
+.food-choice #btn-choice {
+    display: inline-block;
+    flex-grow: 9;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px; 
+    border-radius: 4px;
+    border: 1px solid #E52E7B;
+    background-color: #E52E7B;
+    color: #FFFFFF;
+    line-height: 50px;
 }
-.starRating{ width:79px; vertical-align:middle;}
-.starRating span{ font-size:0; line-height:0; vertical-align:top; text-indent:-100px; text-indent:0; background-position:0 -14px;}
